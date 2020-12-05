@@ -19,7 +19,7 @@ def solution_1():
         count = 0
     return valid_count, to_return
 
-# second Puzzle
+# Second Puzzle
 def solution_2(solution_one_list):
     ecl_list = ['amb', 'blu', 'brn', 'gry', 'grn', 'hzl', 'oth']
     letters = ['g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'w', 'z']
