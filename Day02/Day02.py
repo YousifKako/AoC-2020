@@ -11,7 +11,7 @@ def solution_1():
                 count += 1
         print(count)
 
-# First Puzzle
+# Second Puzzle
 def solution_2():
     with open("Input.txt") as file:
         count = 0

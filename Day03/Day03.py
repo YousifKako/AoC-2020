@@ -15,7 +15,7 @@ def solution_1(x, y):
         x_count += x
     return tree_count
 
-# First Puzzle
+# Second Puzzle
 def solution_2():
     slope_1 = solution_1(1, 1)
     slope_2 = solution_1(3, 1)
