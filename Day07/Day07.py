@@ -32,12 +32,11 @@ def solution_2():
 
     def recurr(bag):
         count = 1
-        if bag in di:
-            for i in di[bag]:
-                try:
-                    count += int(i[0])*recurr(i[2:])
-                except:
-                    continue
+        for i in di[bag]:
+            try:
+                count += int(i[0])*recurr(i[2:])
+            except:
+                continue
         return count
     return recurr("shiny gold") - 1
 
