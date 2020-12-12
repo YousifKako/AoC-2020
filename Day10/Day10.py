@@ -16,7 +16,26 @@ def solution_1():
 
 # Second Puzzle
 def solution_2():
-    pass
+    dc = dict()
+    def recurr(i):
+        if i == len(file_read_list)-1:
+            return 1
+        if i in dc:
+            return dc[i]
+        ans = 0
+        for j in range(i+1, len(file_read_list)):
+            if file_read_list[j] - file_read_list[i] <= 3:
+                ans += recurr(j)
+        dc[i] = ans
+        return ans
+
+    with open("Input.txt") as file:
+        file_read = file.read()
+    file_read_list = list(map(int, file_read.split("\n")))
+    file_read_list.append(0)
+    file_read_list = sorted(file_read_list)
+    file_read_list.append(max(file_read_list)+3)
+    return recurr(0)
 
 
 print(solution_1())
