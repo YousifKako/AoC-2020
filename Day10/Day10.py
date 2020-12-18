@@ -16,17 +16,17 @@ def solution_1():
 
 # Second Puzzle
 def solution_2():
-    dc = dict()
+    dp = dict()
     def recurr(i):
         if i == len(file_read_list)-1:
             return 1
-        if i in dc:
-            return dc[i]
+        if i in dp:
+            return dp[i]
         ans = 0
         for j in range(i+1, len(file_read_list)):
             if file_read_list[j] - file_read_list[i] <= 3:
                 ans += recurr(j)
-        dc[i] = ans
+        dp[i] = ans
         return ans
 
     with open("Input.txt") as file:
